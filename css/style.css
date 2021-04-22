@@ -1,0 +1,40 @@
+@charset "UTF-8";
+html,body { height: 100%; }
+ul,li {list-style: none;}
+a { text-decoration: none; }
+img { border: 0; }
+* { margin: 0; padding: 0; }
+
+#box {
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 100%;/*50px*/
+  background: red;
+  animation-name: rint;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+#box h1 {
+  font-size: 16px;
+  line-height: 100px;
+  text-align: center;
+  color: white;
+}
+
+@keyframes rint {
+  from {
+    left: 0;
+    transform: rotate(0deg);
+  }
+  50% { left: 400px;}
+  to {
+    left: 400px;
+    transform: rotate(360deg);
+  }
+}
